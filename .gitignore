@@ -1,0 +1,4 @@
+.DS_Store
+.idea
+react-chat-client/node_modules
+node-chat-server/node_modules
