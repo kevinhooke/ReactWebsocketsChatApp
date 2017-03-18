@@ -5,9 +5,22 @@ class ConnectedUserListComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: ""
+            userNames: []
         }
     }
+
+    handleUserNameChange(){
+        var users = ChatStore.getUsers();
+        this.setState({ userName : users});
+    }
+
+    componentWillMount(){
+        ChatStore.addChangeListener(this.handleUserNameChange);
+
+    }
+
+
+
 
     render(){
 
