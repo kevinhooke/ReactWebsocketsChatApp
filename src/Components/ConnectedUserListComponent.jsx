@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ChatStore from '../Stores/ChatStore';
 
 class ConnectedUserListComponent extends Component {
 
@@ -16,7 +17,6 @@ class ConnectedUserListComponent extends Component {
 
     componentWillMount(){
         ChatStore.addChangeListener(this.handleUserNameChange);
-
     }
 
 

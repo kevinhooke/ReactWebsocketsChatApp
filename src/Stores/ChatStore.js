@@ -1,3 +1,5 @@
+import AppDispatcher from '../Dispatchers/Dispatcher';
+import EventEmitter from 'events';
 var connectedUsers = [];
 
 class ChatStore extends EventEmitter {
@@ -32,3 +34,5 @@ class ChatStore extends EventEmitter {
     }
 
 }
+
+export default new ChatStore();

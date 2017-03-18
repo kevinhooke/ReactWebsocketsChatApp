@@ -6,6 +6,9 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "flux": "^3.1.2",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2",
@@ -13,6 +16,7 @@
     "ws": "^2.2.1"
   },
   "scripts": {
+    "start-node": "node index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

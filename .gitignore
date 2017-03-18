@@ -2,3 +2,6 @@
 .idea
 react-chat-client/node_modules
 node-chat-server/node_modules
+build
+node_modules
+npm-debug.log

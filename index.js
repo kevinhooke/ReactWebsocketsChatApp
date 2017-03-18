@@ -30,7 +30,7 @@ var port = process.env.PORT || 80;
 
 
 //default/test route
-router.get('/', function(req, res) {
+router.get('/status', function(req, res) {
     res.json({ status: 'App is running!' });
 });
 
@@ -41,6 +41,7 @@ router.get('/users', function(req, res) {
 
 //connect path to router
 app.use("/", router);
+app.use(express.static('build'))
 app.listen(port, function () {
     console.log('Chat Server REST server listening on port 80!')
 })
