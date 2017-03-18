@@ -26,7 +26,7 @@ var app = express();
 
 //init Express Router
 var router = express.Router();
-var port = process.env.PORT || 8090;
+var port = process.env.PORT || 80;
 
 
 //default/test route
@@ -42,5 +42,5 @@ router.get('/users', function(req, res) {
 //connect path to router
 app.use("/", router);
 app.listen(port, function () {
-    console.log('Chat Server REST server listening on port 8090!')
+    console.log('Chat Server REST server listening on port 80!')
 })
