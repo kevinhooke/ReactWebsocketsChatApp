@@ -2,7 +2,8 @@ const WebSocket = require('ws');
 var express = require('express');
 var connectedUsers = [];
 
-const wss = new WebSocket.Server({ port: 8080, headers: {
+//port: 8080
+const wss = new WebSocket.Server({ headers: {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "http://localhost:3000",
     "Access-Control-Allow-Methods": "PUT, GET, POST, DELETE, OPTIONS"
