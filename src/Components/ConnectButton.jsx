@@ -15,9 +15,9 @@ class ConnectButton extends Component {
     }
 
     onClickHandler = () => {
-        console.log("onClickHandler:");
+        console.log("onClickHandler:" + window.location.hostname);
 
-        var ws = new WebSocket('ws://localhost:8080');
+        var ws = new WebSocket('ws://' + window.location.hostname + ':8080');
 
         // ws.onopen = function () {
         //     ws.send(this.state.name);
