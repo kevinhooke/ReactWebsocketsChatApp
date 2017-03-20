@@ -5,10 +5,10 @@ var ChatActions = {
     retrieveConnectedUsers : function(){
 
         request
-            .get('http://' + window.location.hostname + ':8080/users')
+            .get('/users')
             .set('Accept', 'application/json')
             .end(function(err, res){
-
+                console.log('/users called');
 
             });
 
