@@ -18,7 +18,7 @@ class ConnectButton extends Component {
         console.log("onClickHandler:" + window.location.hostname);
         //  + ':8080'
         console.log("protocol: " + window.location.protocol);
-        var ws = new WebSocket(window.location.protocol == 'https:' ? 'wss://' : 'ws://'
+        var ws = new WebSocket((window.location.protocol == 'https:' ? 'wss://' : 'ws://')
              + window.location.host);
         //var ws = new WebSocket('ws://127.0.0.1:8000');
 
