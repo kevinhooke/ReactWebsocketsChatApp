@@ -23,10 +23,10 @@ router.get('/users', function(req, res) {
 app.use("/", router);
 app.use(express.static('build'))
 var server = app.listen(port, function () {
-    console.log('Chat Server REST server listening on port 80!')
+    console.log('Chat Server REST server listening on port: ' + port)
 })
 
-//port: 8080
+//if serving static app from another server/port, send CORS headers in response
 //{ headers: {
 //"Access-Control-Allow-Origin": "*",
 //    "Access-Control-Allow-Headers": "http://localhost:3000",
