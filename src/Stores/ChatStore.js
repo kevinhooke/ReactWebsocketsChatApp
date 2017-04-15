@@ -25,7 +25,7 @@ class ChatStore extends EventEmitter {
 
         switch (action.actionName) {
 
-            case 'USER_UPDATE':
+            case 'CONNECTED_USERS_UPDATE':
                 console.log("ChatStore USER_UPDATE!");
                 connectedUsers = action.users;
                 this.emit('change');

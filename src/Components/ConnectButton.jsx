@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ChatActions from '../Actions/ChatActions';
 
 class ConnectButton extends Component {
 
@@ -22,10 +23,6 @@ class ConnectButton extends Component {
              + window.location.host);
         //var ws = new WebSocket('ws://127.0.0.1:8000');
 
-        // ws.onopen = function () {
-        //     ws.send(this.state.name);
-        // };
-
         ws.onopen = () => {
             ws.send(this.state.name);
         };
@@ -33,6 +30,9 @@ class ConnectButton extends Component {
         ws.onmessage = (data, flags) => {
             console.log("message received");
         };
+
+        ChatActions.retrieveConnectedUsers();
+
     }
 
     render(){
